@@ -1,0 +1,26 @@
+5. What is a Web Server? Examples:
+
+
+Definition:
+Software or hardware that handles HTTP requests and delivers web content to clients.
+
+
+Functions:
+
+Serves web pages.
+
+Hosts applications.
+
+Manages APIs.
+
+
+
+Examples of Web Servers:
+
+Apache HTTP Server
+
+Nginx
+
+Microsoft IIS
+
+LiteSpeed

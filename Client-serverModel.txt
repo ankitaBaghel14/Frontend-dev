@@ -1,0 +1,11 @@
+                                                                  [Client / Browser]
+                                                                          |
+                                                                          | HTTP Request
+                                                                          v
+                                                                       [Server]
+                                                                          |
+                                                                          | HTTP Response 
+                                                                          |(HTML, CSS, JS, Images)
+                                                                          v
+                                                                  [Client / Browser] 
+                                                                   (Page displayed)

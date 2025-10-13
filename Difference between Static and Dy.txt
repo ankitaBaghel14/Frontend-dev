@@ -1,0 +1,19 @@
+8. Difference between Static and Dynamic Websites:
+
+
+Static Websites:
+
+Content is fixed, doesn’t change unless manually updated.
+
+Faster, simpler, and cheaper.
+
+Example: Personal portfolio website, company brochure site.
+
+
+Dynamic Websites:
+
+Content changes dynamically based on user interaction or database queries.
+
+More complex, can provide personalized experience.
+
+Example: Facebook, Amazon, Gmail.
