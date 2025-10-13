@@ -1,0 +1,17 @@
+9. Five Web Browsers and Their Rendering Engines:
+
+
+
+Google Chrome – Uses the Blink rendering engine. It is fast, supports modern web standards, and is widely used.
+
+Mozilla Firefox – Uses the Gecko rendering engine. It is open-source and focuses on privacy and security.
+
+Safari – Uses the WebKit rendering engine. It is optimized for Apple devices.
+
+Microsoft Edge – Uses the Blink rendering engine (based on Chromium). It integrates well with Windows.
+
+Opera – Uses the Blink rendering engine. It is lightweight and comes with built-in features like an ad-blocker and VPN.
+
+
+
+Rendering Engine: It is the software component that converts HTML, CSS, and JavaScript into the visual webpage you see on your screen. Different browsers may display the same website slightly differently because they use different rendering engines.
