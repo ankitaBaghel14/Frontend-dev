@@ -1,0 +1,23 @@
+6. Roles in a Project:
+
+
+Frontend Developer:
+
+Designs user interfaces and ensures good user experience (UX).
+
+Implements responsive designs for mobile and desktop.
+
+
+
+Backend Developer:
+
+Writes server-side code, APIs, and manages authentication.
+
+Connects the application with the database.
+
+
+Database Administrator (DBA):
+
+Creates, manages, and optimizes databases.
+
+Ensures security, backup, and data integrity.

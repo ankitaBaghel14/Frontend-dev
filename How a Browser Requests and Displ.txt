@@ -1,0 +1,17 @@
+3. How a Browser Requests and Displays a Web Page:
+
+
+
+User Input: User types a URL or clicks a link.
+
+DNS Lookup: Browser converts the domain name to an IP address to locate the server.
+
+HTTP Request: Browser sends an HTTP request to the web server asking for the page.
+
+Server Response: Server sends back HTML, CSS, JS, images, or JSON data.
+
+Rendering: Browser parses the HTML and CSS to display the page layout.
+
+JavaScript Execution: JS code runs to make the page interactive (e.g., dropdown menus, dynamic content).
+
+Page Display: Fully rendered and interactive page is shown to the user.
