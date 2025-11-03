@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About My City | Explore Wonders</title>
+<style>
+    /* Reset and Base Styling */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { 
+        font-family: 'Poppins', sans-serif; 
+        background-color: #f9f9fb; 
+        color: #333;
+    }
+
+    /* Header and Nav */
+    header {
+        background: linear-gradient(90deg, #6a11cb, #2575fc);
+        color: white;
+        text-align: center;
+        padding: 2em 1em;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    nav {
+        background-color: #444;
+        text-align: center;
+        padding: 0.8em;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+    nav a:hover {
+        color: #ffcc70;
+    }
+
+    /* Section General Styling */
+    section {
+        padding: 80px 15%;
+        text-align: center;
+    }
+    section h2 {
+        font-size: 2.2rem;
+        margin-bottom: 1em;
+        color: #222;
+    }
+    section p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    /* Parallax and Gradient Sections */
+    .section1 {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        background-attachment: fixed;
+        color: white;
+    }
+    .section2 {
+        background: radial-gradient(circle at top left, #ff7e5f, #feb47b);
+        color: #fff;
+    }
+    .section3 {
+        background: url('https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=1400&q=60') center/cover fixed no-repeat;
+        color: #fff;
+        text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+    }
+
+    /* New Sections */
+    .section4 {
+        background: linear-gradient(135deg, #89f7fe, #66a6ff);
+        color: #222;
+    }
+    .section5 {
+        background: #fff;
+        color: #333;
+    }
+
+    /* Gallery */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5em;
+        margin-top: 2em;
+    }
+    .gallery img {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    }
+
+    /* Contact Section */
+    .contact-info {
+        background: linear-gradient(135deg, #f093fb, #f5576c);
+        color: white;
+        padding: 80px 15%;
+        text-align: center;
+        border-top: 5px solid #fff;
+    }
+    .contact-info h2 {
+        margin-bottom: 1em;
+    }
+    .contact-info p {
+        font-size: 1.1rem;
+        margin: 0.5em 0;
+    }
+    .contact-info a {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .contact-info a:hover {
+        text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #222;
+        color: white;
+        text-align: center;
+        padding: 1em;
+        font-size: 0.9rem;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>🌆 Explore My City</h1>
+    <p>Discover culture, colors, and creativity all in one place.</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#places">Attractions</a>
+    <a href="#nightlife">Night Life</a>
+    <a href="#food">Food</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<main>
+    <section id="about" class="section1">
+        <h2>About the City</h2>
+        <p>Our city is a vibrant blend of tradition and modernity. Known for its friendly people, historic charm, and technological innovation, it’s a place where culture meets progress.</p>
+    </section>
+
+    <section id="places" class="section2">
+        <h2>Famous Attractions</h2>
+        <p>Explore our iconic landmarks — from serene parks and ancient temples to bustling markets and art-filled streets. Every corner tells a story of pride and heritage.</p>
+    </section>
+
+    <section id="nightlife" class="section3">
+        <h2>Night Life</h2>
+        <p>When the sun sets, the city lights up. Rooftop cafés, music lounges, and night bazaars make evenings unforgettable.</p>
+    </section>
+
+    <section id="food" class="section4">
+        <h2>Local Food</h2>
+        <p>From spicy street snacks to gourmet delicacies, our cuisine reflects our culture — rich, diverse, and flavorful. Don’t miss the iconic dishes that make our city a food lover’s paradise.</p>
+    </section>
+
+    <section id="gallery" class="section5">
+        <h2>City Gallery</h2>
+        <p>Take a glimpse at the beauty and vibrancy of our city through these images.</p>
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=800&q=60" alt="City View">
+            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=60" alt="Monument">
+            <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=800&q=60" alt="Street Market">
+            <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=800&q=60" alt="Night View">
+        </div>
+    </section>
+
+    <section id="contact" class="contact-info">
+        <h2>Contact Us</h2>
+        <p>📍 Address: 123 Heritage Street, Downtown</p>
+        <p>📞 Phone: <a href="tel:+911234567890">+91 12345 67890</a></p>
+        <p>📧 Email: <a href="mailto:cityinfo@example.com">cityinfo@example.com</a></p>
+        <p>Follow us on 
+            <a href="#">Instagram</a> | 
+            <a href="#">Facebook</a> | 
+            <a href="#">Twitter</a>
+        </p>
+    </section>
+</main>
+
+<footer>
+    © 2025 Explore My City | Designed with ❤️ by Ankita
+</footer>
+
+</body>
+</html>

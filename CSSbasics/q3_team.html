@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Team | Innovators United</title>
+<style>
+    /* Base Reset */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #f9f9fb, #e4ecff);
+        color: #333;
+    }
+
+    /* Header */
+    header {
+        background: linear-gradient(90deg, #3b82f6, #9333ea);
+        color: white;
+        text-align: center;
+        padding: 2em 1em;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5em;
+    }
+    header p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+    }
+
+    /* Team Section */
+    .team {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 60px 10%;
+    }
+    .card {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        width: 300px;
+        padding: 25px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+    .lead {
+        background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+        border: 2px solid #2563eb;
+    }
+    img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 4px solid #93c5fd;
+        margin-bottom: 15px;
+    }
+    .card h3 {
+        font-size: 1.4rem;
+        margin: 0.5em 0;
+    }
+    .card p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #555;
+    }
+    .role {
+        font-weight: 600;
+        color: #2563eb;
+    }
+
+    /* About Section */
+    .about {
+        background: linear-gradient(135deg, #c084fc, #9333ea);
+        color: white;
+        text-align: center;
+        padding: 80px 10%;
+    }
+    .about h2 {
+        font-size: 2rem;
+        margin-bottom: 1em;
+    }
+    .about p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    /* Contact Section */
+    .contact {
+        background: #f1f5f9;
+        text-align: center;
+        padding: 80px 10%;
+    }
+    .contact h2 {
+        font-size: 2rem;
+        margin-bottom: 1em;
+        color: #222;
+    }
+    .contact p {
+        font-size: 1.1rem;
+        margin: 0.5em 0;
+        color: #444;
+    }
+    .contact a {
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .contact a:hover {
+        text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #222;
+        color: white;
+        text-align: center;
+        padding: 1.5em;
+        font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .team {
+            flex-direction: column;
+            align-items: center;
+        }
+        .card {
+            width: 85%;
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Meet Our Amazing Team</h1>
+    <p>Together we create, innovate, and inspire ✨</p>
+</header>
+
+<section class="about" id="about">
+    <h2>About Our Team</h2>
+    <p>We are a group of passionate designers and developers working together to craft beautiful, functional, and user-friendly experiences. Collaboration, creativity, and continuous learning are the heart of what we do.</p>
+</section>
+
+<section class="team" id="team">
+    <div class="card">
+        <img src="https://via.placeholder.com/120" alt="Riya Sharma">
+        <h3>Riya Sharma</h3>
+        <p class="role">Designer</p>
+        <p>Passionate about creating modern and clean UI designs that delight users and tell stories through visuals.</p>
+    </div>
+
+    <div class="card lead">
+        <img src="https://via.placeholder.com/120" alt="Ankita Baghel">
+        <h3>Ankita Baghel</h3>
+        <p class="role">Team Lead</p>
+        <p>Leading with innovation, collaboration, and creativity. Always striving for excellence and motivating others to shine.</p>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/120" alt="Arjun Verma">
+        <h3>Arjun Verma</h3>
+        <p class="role">Developer</p>
+        <p>Focused on writing clean and efficient code that brings life to user interfaces and enhances performance.</p>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>📧 Email: <a href="mailto:team@innovators.com">team@innovators.com</a></p>
+    <p>📞 Phone: <a href="tel:+911234567890">+91 12345 67890</a></p>
+    <p>🌐 Follow us on 
+        <a href="#">LinkedIn</a> | 
+        <a href="#">Instagram</a> | 
+        <a href="#">GitHub</a>
+    </p>
+</section>
+
+<footer>
+    © 2025 Innovators United | Designed with ❤️ by Ankita & Team
+</footer>
+
+</body>
+</html>

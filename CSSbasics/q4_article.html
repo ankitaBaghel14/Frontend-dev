@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art of Simplicity</title>
+    <style>
+        /* Base Styling */
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f9fafb, #e5e7eb);
+            color: #222;
+            transition: background 0.5s ease;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 60px 20px 30px;
+            background: linear-gradient(90deg, #3b82f6, #9333ea);
+            color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        header h2 {
+            font-weight: 400;
+            font-size: 1em;
+            color: #e0e7ff;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        p {
+            margin-bottom: 1.5em;
+            text-align: justify;
+        }
+
+        p::first-letter {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #2b2b2b;
+        }
+
+        p::first-line {
+            font-weight: bold;
+        }
+
+        mark {
+            background-color: #ffeb3b;
+            padding: 0 4px;
+        }
+
+        blockquote {
+            border-left: 5px solid #3b82f6;
+            background-color: #f3f4f6;
+            padding: 15px 25px;
+            margin: 25px 0;
+            font-style: italic;
+            color: #444;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px 0;
+            background-color: #111827;
+            color: #e5e7eb;
+            font-size: 0.9em;
+            letter-spacing: 0.5px;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2em; }
+            main { margin: 30px 15px; padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Art of Simplicity</h1>
+        <h2>By Ankita Baghel | Published on Nov 3, 2025</h2>
+    </header>
+
+    <main>
+        <p><mark>Simplicity</mark> is not about removing features, but about focusing on what truly matters.</p>
+        <p>Design is a conversation between form and function — both must coexist harmoniously.</p>
+        <blockquote>"Perfection is achieved not when there is nothing more to add, but when there is nothing left to take away."</blockquote>
+        <p>Every product tells a story. The clearer the story, the better the user experience.</p>
+        <p>Clarity comes from restraint, not from excess decoration or complexity.</p>
+    </main>
+
+    <footer>
+        © 2025 | Written & Designed by Ankita Baghel
+    </footer>
+</body>
+</html>

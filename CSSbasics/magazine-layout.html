@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Magazine Style — Multi Columns</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+
+  :root{
+    --bg:#f4efe8;
+    --paper:#fffdf9;
+    --accent:#b45309;
+    --text:#1f2937;
+  }
+  html,body{height:100%;margin:0;font-family:'Merriweather',serif;background:linear-gradient(180deg,#efe7df,#f7f3f0);color:var(--text)}
+  .container{
+    max-width:1100px;
+    margin:40px auto;
+    padding:36px;
+    background:var(--paper);
+    border-radius:10px;
+    box-shadow:0 10px 30px rgba(15,23,42,0.08);
+  }
+
+  /* heading spans all columns */
+  .headline{
+    column-span: all; /* modern browsers */
+    -webkit-column-span: all; /* Safari prefix */
+    display:block;
+    text-align:center;
+    color:var(--accent);
+    margin-bottom:18px;
+  }
+  .headline h1{ margin:0; font-size:2.4rem; letter-spacing:-0.5px; }
+  .byline{ text-align:center; color:#6b7280; margin-bottom:26px; font-weight:600; }
+
+  /* columns */
+  .article{
+    column-count:3;
+    column-gap:36px;
+    column-rule: 1px solid rgba(15,23,42,0.06);
+    font-size:1.05rem;
+    text-align:justify;
+    line-height:1.75;
+    hyphens:auto;
+  }
+
+  /* float image aligned to left, constrained width so it sits inside first column nicely */
+  .lead-image{
+    float:left;
+    width:220px;
+    margin:6px 18px 12px 0;
+    border-radius:8px;
+    box-shadow:0 8px 26px rgba(15,23,42,0.12);
+  }
+
+  /* responsive: reduce columns on smaller screens */
+  @media(max-width:980px){ .article{ column-count:2; } }
+  @media(max-width:640px){ .article{ column-count:1; } .lead-image{ width:100%; float:none; margin:0 0 18px 0 } }
+  
+  /* small stylings for drop caps (first letter) using ::first-letter */
+  .article p::first-letter{
+    font-size:2.2rem;
+    font-weight:700;
+    float:left;
+    line-height:1;
+    margin-right:8px;
+    color:var(--accent);
+  }
+
+  /* ensure spacing around column-spanning elements */
+  .article h2{ column-span:all; -webkit-column-span:all; margin-top:0; margin-bottom:8px; font-size:1.3rem; color:#111827 }
+  .article figure{ margin:0; }
+
+  /* small caption */
+  .caption{ font-size:0.85rem; color:#6b7280; margin-bottom:12px; }
+
+  /* padding around container for readability */
+  .container{ padding:32px; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="headline">
+      <h1>The Quiet Power of Good Design</h1>
+    </div>
+    <div class="byline">By Ankita Baghel • Nov 3, 2025</div>
+
+    <article class="article">
+      <figure>
+        <img class="lead-image" src="https://images.unsplash.com/photo-1506086679527-1f8b6d9f7bca?auto=format&fit=crop&w=800&q=60" alt="Designer workspace">
+        <figcaption class="caption">A designer’s desk — tools of thoughtful work.</figcaption>
+      </figure>
+
+      <h2>Introduction</h2>
+      <p>Design is a language. When used transparently it disappears, allowing the user's needs to take the foreground. The greatest interfaces are often those you barely notice — they quietly help you accomplish your goal without drawing attention to themselves.</p>
+
+      <p>Within product teams, designers and engineers collaborate not to add more features, but to sculpt the experience so that each step feels inevitable and clear. This is the difference between features and solutions — and it shapes how people perceive usefulness and trust.</p>
+
+      <h2>People First</h2>
+      <p>Understanding people requires listening. Empathy in design starts with context — who the people are, what they value, and what they are trying to do. Data informs hypotheses, but observation and conversation reveal nuance that analytics alone cannot uncover.</p>
+
+      <p>When decisions are grounded in human insight, outcomes become more respectful and sustainable. Teams that prioritize learning over proving will arrive at better experiences faster and with less friction.</p>
+
+      <h2>Conclusion</h2>
+      <p>Design is not decoration; it is discipline. The best work aligns user goals, business goals, and technical realities. In that intersection, with clarity and humility, useful and beautiful things are made.</p>
+    </article>
+  </div>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing Plans</title>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(120deg, #dfe9f3, #ffffff);
+        margin: 0;
+        color: #222;
+    }
+
+    h1 {
+        text-align: center;
+        padding: 50px 0 20px;
+        letter-spacing: 1px;
+        font-size: 2.2rem;
+    }
+
+    p.subtitle {
+        text-align: center;
+        color: #555;
+        margin-bottom: 40px;
+    }
+
+    .pricing {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 0 5% 60px;
+    }
+
+    .plan {
+        position: relative;
+        background: linear-gradient(180deg, #ffffff, #f8faff);
+        border-radius: 15px;
+        width: 300px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        padding: 35px 25px;
+        transition: all 0.3s ease;
+        border-top: 5px solid transparent;
+        overflow: hidden;
+    }
+
+    .plan:hover {
+        transform: translateY(-10px);
+        border-top: 5px solid #2563eb;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    .plan.popular {
+        border-top-color: #2563eb;
+        background: linear-gradient(180deg, #eef4ff, #ffffff);
+    }
+
+    .badge {
+        position: absolute;
+        top: 20px;
+        right: -40px;
+        background: #2563eb;
+        color: #fff;
+        transform: rotate(45deg);
+        width: 150px;
+        text-align: center;
+        font-size: 0.8rem;
+        font-weight: 500;
+        padding: 4px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+        color: #111;
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+    }
+
+    li {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+        color: #555;
+    }
+
+    .price {
+        font-size: 2rem;
+        color: #2563eb;
+        margin: 20px 0;
+        font-weight: bold;
+    }
+
+    a {
+        display: inline-block;
+        background: #2563eb;
+        color: white;
+        text-decoration: none;
+        padding: 12px 30px;
+        border-radius: 8px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    a:hover {
+        background: #1d4ed8;
+        box-shadow: 0 5px 15px rgba(37,99,235,0.3);
+        transform: scale(1.05);
+    }
+
+    footer {
+        text-align: center;
+        background: #111827;
+        color: #e5e7eb;
+        padding: 15px 0;
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 768px) {
+        .plan {
+            width: 90%;
+        }
+    }
+</style>
+</head>
+<body>
+    <h1>Choose Your Plan</h1>
+    <p class="subtitle">Flexible pricing designed for everyone — start small or go all-in.</p>
+
+    <div class="pricing">
+        <div class="plan">
+            <h2>Basic</h2>
+            <ul>
+                <li>✔ 1 Project</li>
+                <li>✔ Email Support</li>
+                <li>✔ Community Access</li>
+            </ul>
+            <p class="price">$9/mo</p>
+            <a href="#">Select</a>
+        </div>
+
+        <div class="plan popular">
+            <div class="badge">Most Popular</div>
+            <h2>Standard</h2>
+            <ul>
+                <li>✔ 5 Projects</li>
+                <li>✔ Priority Support</li>
+                <li>✔ Custom Templates</li>
+            </ul>
+            <p class="price">$19/mo</p>
+            <a href="#">Select</a>
+        </div>
+
+        <div class="plan">
+            <h2>Premium</h2>
+            <ul>
+                <li>✔ Unlimited Projects</li>
+                <li>✔ 24/7 Support</li>
+                <li>✔ All Features</li>
+            </ul>
+            <p class="price">$29/mo</p>
+            <a href="#">Select</a>
+        </div>
+    </div>
+
+    <footer>© 2025 Ankita Baghel | Pricing Page</footer>
+</body>
+</html>
