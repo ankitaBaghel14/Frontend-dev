@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Flex + Grid Combined Layout</title>
+<style>
+  :root{--accent:#0a3d62;--muted:#556;--gap:20px}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,Arial;background:#f6f8fb;color:#111}
+  .page{max-width:1100px;margin:0 auto;padding:28px;display:flex;flex-direction:column;gap:20px;min-height:100vh}
+
+  header{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding:18px;border-radius:10px;background:#fff;box-shadow:0 6px 18px rgba(2,6,23,0.06);
+  }
+  .logo{font-weight:700;color:var(--accent);font-size:1.2rem}
+  nav a{margin-left:14px;text-decoration:none;color:var(--muted);font-weight:500}
+  nav a:hover{color:var(--accent)}
+
+  /* Main grid: 2 columns (article + sidebar) */
+  .main{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    gap:var(--gap);
+    align-items:start;
+  }
+
+  /* Article area with 3 boxes aligned using flexbox */
+  article{
+    background:#fff;padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.06);
+    display:flex;flex-direction:column;gap:16px;
+  }
+
+  .title{
+    font-size:1.4rem;color:var(--accent);
+    opacity:0; transform:translateY(12px);
+    animation: titleIn 0.8s ease-out forwards 0.2s;
+  }
+
+  @keyframes titleIn{
+    to{opacity:1; transform:translateY(0)}
+  }
+
+  .boxes{
+    display:flex;gap:12px;flex-wrap:wrap;
+  }
+  .box{
+    background:#f8fafc;border-radius:8px;padding:14px;flex:1;min-width:150px;
+    box-shadow:0 4px 12px rgba(2,6,23,0.04);
+  }
+
+  aside.sidebar{
+    background:#fff;padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.06);
+  }
+
+  footer{
+    background:#fff;padding:14px;border-radius:10px;text-align:center;color:var(--muted);
+    box-shadow:0 6px 18px rgba(2,6,23,0.06);
+  }
+
+  /* Collapse to single column on mobile */
+  @media (max-width:880px){
+    .main{grid-template-columns:1fr}
+    .boxes{flex-direction:column}
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="logo">BrandName</div>
+      <nav>
+        <a href="#">Home</a><a href="#">Work</a><a href="#">Blog</a><a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <div class="main">
+      <article>
+        <h2 class="title">Bringing Design & Code Together</h2>
+        <p style="color:var(--muted)">A short intro paragraph describing the article content and why it matters. This title fades in on load using @keyframes.</p>
+
+        <!-- three boxes aligned with Flexbox -->
+        <div class="boxes">
+          <div class="box">
+            <h4 style="margin:0 0 8px">Design</h4>
+            <p style="margin:0;color:var(--muted)">User-centered interfaces and accessible components.</p>
+          </div>
+          <div class="box">
+            <h4 style="margin:0 0 8px">Development</h4>
+            <p style="margin:0;color:var(--muted)">Clean, maintainable CSS and semantic markup.</p>
+          </div>
+          <div class="box">
+            <h4 style="margin:0 0 8px">Performance</h4>
+            <p style="margin:0;color:var(--muted)">Optimized assets and responsive patterns.</p>
+          </div>
+        </div>
+
+        <p style="margin-top:8px;color:var(--muted)">Longer article content can go here. The article area uses a column layout so the content flows naturally and boxes stay grouped at the top.</p>
+      </article>
+
+      <aside class="sidebar">
+        <h3 style="margin-top:0">Sidebar</h3>
+        <p style="color:var(--muted)">Useful links, recent posts, or a short bio. The whole page collapses into a single column on smaller screens.</p>
+      </aside>
+    </div>
+
+    <footer>© 2025 BrandName — contact@brand.example</footer>
+  </div>
+</body>
+</html>
