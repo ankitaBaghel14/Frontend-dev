@@ -1,0 +1,45 @@
+/* Centering using Flexbox */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 100vh;
+    background-color: #e6f2ff;
+}
+
+/* Box styles */
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-weight: bold;
+    border: 2px solid #444;
+    overflow: auto; /* Demonstrate overflow */
+}
+
+/* Different units demonstration */
+.box1 {
+    height: 100px;
+    width: 50%;
+    background: #ffd6cc;
+}
+
+.box2 {
+    height: 20vh;
+    width: 200px;
+    background: #ccffe6;
+}
+
+.box3 {
+    height: 10em;
+    max-width: 300px;
+    min-height: 80px;
+    background: #ffffb3;
+}

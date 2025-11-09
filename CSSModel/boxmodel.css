@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  margin: 0;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+/* Demonstration box */
+.box {
+  background: #ffe0b3;
+  padding: 30px;
+  border: 10px solid #ff9933;
+  margin: 20px;
+  outline: 2px dashed #999;
+  box-sizing: content-box; /* Default behavior */
+}
+
+/* Description text */
+.desc {
+  max-width: 500px;
+  color: #333;
+}

@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fafafa;
+    text-align: center;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 1rem;
+}
+
+/* Flex layout */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px;
+}
+
+/* Card base style */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+/* Text shadow for headings */
+.card h2 {
+    text-shadow: 1px 1px 2px gray;
+}
+
+/* Different shadow intensities */
+.light-shadow { box-shadow: 2px 2px 5px #ccc; }
+.medium-shadow { box-shadow: 4px 4px 10px #aaa; }
+.deep-shadow { box-shadow: 6px 6px 15px #888; }
+
+/* Hover lift effect */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 8px 8px 20px #666;
+}
