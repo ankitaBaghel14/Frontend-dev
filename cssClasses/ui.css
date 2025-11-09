@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+}
+
+header, footer {
+  text-align: center;
+  padding: 1rem;
+  background: #222;
+  color: #fff;
+}
+
+.ui-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 300px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Components styling */
+.search-bar, select, button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button {
+  background: #0077cc;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background: #005fa3;
+}
+button:focus, .search-bar:focus, select:focus {
+  outline: 2px solid #28a745;
+  outline-offset: 3px;
+}
+.secondary {
+  background: #6c757d;
+}
+
+/* Align buttons */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}

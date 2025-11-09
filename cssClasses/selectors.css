@@ -1,0 +1,34 @@
+/* Element selector */
+p {
+  font-family: Arial, sans-serif;
+  margin-bottom: 0.8rem;
+}
+
+/* Class selector */
+.highlight {
+  background: #e0f7fa;
+  padding: 5px;
+}
+
+/* ID selector */
+#special {
+  color: #d63384;
+  font-weight: bold;
+}
+
+/* Attribute selector */
+a[target="_blank"] {
+  color: #0077cc;
+  text-decoration: none;
+}
+a[target="_blank"]:hover {
+  text-decoration: underline;
+}
+
+/* Combinators examples */
+ul li {
+  color: #222;
+}
+ul > li {
+  font-weight: 600;
+}
