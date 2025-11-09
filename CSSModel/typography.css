@@ -1,0 +1,34 @@
+body {
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  margin: 40px;
+  text-align: justify;
+  color: #333;
+}
+
+/* Highlight and emphasis styles */
+mark {
+  background-color: #ffecb3;
+  color: #000;
+}
+
+strong {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+em {
+  color: #2980b9;
+  font-style: italic;
+}
+
+/* Pseudo-elements */
+p::first-line {
+  font-weight: bold;
+}
+
+p::first-letter {
+  font-size: 2em;
+  color: #8e44ad;
+}

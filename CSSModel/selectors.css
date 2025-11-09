@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 20px;
+}
+
+/* ATTRIBUTE SELECTORS */
+/* [type="text"] targets input fields of text type */
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #555;
+    border-radius: 5px;
+}
+
+/* [href^="https"] targets links starting with 'https' */
+a[href^="https"] {
+    color: green;
+    font-weight: bold;
+}
+
+/* PSEUDO-CLASSES */
+a:hover {
+    color: red;
+}
+
+input:focus {
+    border-color: blue;
+    outline: none;
+}
+
+/* :nth-child() applies style to every even list item */
+li:nth-child(even) {
+    background: #e0e0e0;
+}
+
+/* PSEUDO-ELEMENTS */
+h1::before {
+    content: "★ ";
+    color: gold;
+}
+
+h1::after {
+    content: " ★";
+    color: gold;
+}
+
+/* COMBINATORS */
+/* Descendant selector */
+section p {
+    color: #333;
+}
+
+/* Adjacent sibling (+): styles next p after .note */
+.note + p {
+    color: blue;
+    font-style: italic;
+}
+
+/* General sibling (~): applies to all later siblings */
+.note ~ ul {
+    border: 2px dashed gray;
+    padding: 10px;
+}
+
+/* Child selector (>): targets direct children only */
+section > a {
+    text-decoration: none;
+}

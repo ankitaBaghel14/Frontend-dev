@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+/* Flexbox for layout */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 50px;
+  flex-wrap: wrap;
+}
+
+/* Base box styling */
+.box {
+  width: 120px;
+  height: 120px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px #aaa;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Transformations on hover */
+.rotate:hover { transform: rotate(30deg); }
+.scale:hover { transform: scale(1.3); }
+.translate:hover { transform: translate(20px, -10px); }
+.skew:hover { transform: skew(15deg, 5deg); }
