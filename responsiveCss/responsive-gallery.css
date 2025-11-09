@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+header, footer {
+  background: #333;
+  color: white;
+  padding: 1rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+figure {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  transition: all 0.4s ease;
+}
+
+/* Different filters */
+figure:nth-child(1) img { filter: blur(3px); }
+figure:nth-child(2) img { filter: grayscale(100%); }
+figure:nth-child(3) img { filter: sepia(100%); }
+figure:nth-child(4) img { filter: brightness(0.7); }
+figure:nth-child(5) img { filter: contrast(180%); }
+figure:nth-child(6) img { filter: hue-rotate(90deg); }
+
+/* Hover removes filter */
+figure:hover img {
+  filter: none;
+}
+
+figcaption {
+  padding: 0.5rem;
+  font-weight: bold;
+}
