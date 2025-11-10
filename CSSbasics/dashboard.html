@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Admin Dashboard — CSS Only</title>
+<style>
+  :root{
+    --header-h:64px;
+    --sidebar-w:260px;
+    --bg:#0f1724;
+    --card-bg:#0b1220;
+    --accent:#06b6d4;
+    --muted:#94a3b8;
+  }
+  html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:linear-gradient(180deg,#071627,#071827);color:#e6eef8}
+
+/* Fixed header */
+  header {
+    position:fixed; top:0; left:0; right:0;
+    height:var(--header-h);
+    background:linear-gradient(90deg,#0ea5a4,#2563eb);
+    display:flex; align-items:center; gap:16px;
+    padding:0 22px; box-shadow:0 6px 18px rgba(2,6,23,0.6); z-index:40;
+  }
+  header .brand{ font-weight:800; font-size:1.1rem; letter-spacing:-0.2px; }
+  header nav{ margin-left:auto; display:flex; gap:12px; align-items:center; }
+  header nav a{ color:rgba(255,255,255,0.95); text-decoration:none; padding:8px 12px; border-radius:8px; font-weight:600 }
+
+/* Layout wrapper under header */
+  .app {
+    display:flex;
+    padding-top:var(--header-h);
+    min-height:calc(100vh - var(--header-h));
+  }
+
+/* Sidebar — full height (calc) and sticky to viewport */
+  aside.sidebar {
+    width:var(--sidebar-w);
+    background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    padding:20px;
+    border-right:1px solid rgba(255,255,255,0.03);
+    box-shadow: 6px 0 18px rgba(2,6,23,0.45);
+    position:sticky;
+    top:var(--header-h);
+    height: calc(100vh - var(--header-h));
+    overflow:auto;
+    z-index:10;
+  }
+  .sidebar .profile{
+    display:flex; gap:12px; align-items:center; margin-bottom:18px;
+  }
+  .avatar{ width:48px; height:48px; border-radius:10px; background:linear-gradient(135deg,#60a5fa,#7c3aed); display:inline-block; }
+
+  .nav-links{ display:flex; flex-direction:column; gap:8px; margin-top:12px; }
+  .nav-links a {
+    padding:10px 12px; border-radius:10px; color:#e6eef8; text-decoration:none;
+    display:flex; align-items:center; gap:10px; font-weight:600;
+  }
+  .nav-links a:hover{ background: rgba(255,255,255,0.02); transform: translateX(6px); }
+
+/* Main content */
+  main.content {
+    flex:1; padding:28px; overflow:auto;
+    display:flex; flex-direction:column; gap:20px;
+  }
+
+  .grid { display:flex; gap:20px; align-items:flex-start; }
+  .grid .col {
+    flex:1;
+    display:flex; flex-direction:column; gap:20px;
+  }
+
+  .card {
+    background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border-radius:12px; padding:18px; box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+    border:1px solid rgba(255,255,255,0.03);
+  }
+
+  .stat-row { display:flex; gap:12px; justify-content:space-between; align-items:center; }
+  .stat { background:linear-gradient(90deg,#0ea5a4,#2563eb); padding:14px; border-radius:10px; color:#001217; font-weight:700; min-width:120px; text-align:center; }
+
+/* content boxes must be evenly spaced and shadowed */
+  .boxes {
+    display:grid; grid-template-columns:repeat(2,1fr); gap:20px;
+  }
+  @media(max-width:900px){ .boxes{ grid-template-columns:1fr; } }
+
+/* responsive: stack sidebar above content on small screens */
+  @media(max-width:880px){
+    .app{ flex-direction:column; }
+    aside.sidebar{ width:100%; height:auto; position:relative; top:0; order:0; }
+    header nav{ display:none; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="brand">Ankita Dashboard</div>
+    <div style="margin-left:14px;color:rgba(255,255,255,0.9);font-size:0.95rem">Analytics</div>
+    <nav>
+      <a href="#">Overview</a>
+      <a href="#">Reports</a>
+      <a href="#">Settings</a>
+    </nav>
+  </header>
+
+  <div class="app">
+    <aside class="sidebar" aria-label="Sidebar navigation">
+      <div class="profile">
+        <div class="avatar" aria-hidden="true"></div>
+        <div>
+          <div style="font-weight:700">Ankita Baghel</div>
+          <div style="font-size:0.85rem;color:var(--muted)">Admin</div>
+        </div>
+      </div>
+
+      <nav class="nav-links" role="navigation" aria-label="Main">
+        <a href="#">🏠 Dashboard</a>
+        <a href="#">📈 Analytics</a>
+        <a href="#">🗂 Projects</a>
+        <a href="#">⚙️ Settings</a>
+        <a href="#">🔒 Logout</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h2 style="margin:0">Welcome back, Ankita</h2>
+          <div style="color:#94a3b8">Last login: Nov 3, 2025</div>
+        </div>
+        <div style="height:12px"></div>
+        <div class="stat-row">
+          <div class="stat">1,249</div>
+          <div class="stat">421</div>
+          <div class="stat">98%</div>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="col">
+          <div class="card">
+            <h3 style="margin-top:0">Traffic Overview</h3>
+            <p style="color:#94a3b8">A compact chart area — in a real app you would render an SVG or canvas here.</p>
+            <div style="height:160px;border-radius:8px;background:linear-gradient(90deg,#071427,#082737);display:flex;align-items:center;justify-content:center;color:#8fbcd6">[Chart placeholder]</div>
+          </div>
+
+          <div class="card">
+            <h3 style="margin-top:0">Recent Activity</h3>
+            <ul style="color:#cbd5e1;list-style:none;padding:0;margin:0;display:grid;gap:8px">
+              <li>● New user signed up — 10m ago</li>
+              <li>● Project "Aurora" updated — 1h ago</li>
+              <li>● Payment succeeded — 3h ago</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <h3 style="margin-top:0">Top Content Boxes</h3>
+            <div class="boxes">
+              <div class="card" style="padding:14px">
+                <h4 style="margin:0 0 8px">Box A</h4>
+                <p style="color:#94a3b8;margin:0">Snapshot of data or control widgets go here.</p>
+              </div>
+              <div class="card" style="padding:14px">
+                <h4 style="margin:0 0 8px">Box B</h4>
+                <p style="color:#94a3b8;margin:0">Secondary panel for user actions or metrics.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 style="margin-top:0">Notes</h3>
+            <p style="color:#94a3b8">This dashboard uses only HTML & CSS. Sidebar stays full height and will stack above content on small screens.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
